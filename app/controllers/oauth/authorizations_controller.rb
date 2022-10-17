@@ -11,7 +11,7 @@ class Oauth::AuthorizationsController < ApplicationController
         response_type: 'code',
         scope: 'foo',
         client_id: 'oauth-client',
-        redirect_uri: 'http://localhost:3000/callback',
+        redirect_uri: 'http://localhost:3000/oauth/callback',
         state: SecureRandom.urlsafe_base64,
       })
   
