@@ -3,5 +3,6 @@ Rails.application.routes.draw do
 
   namespace :oauth do
     resources :authorizations, only: [:new]
+    get '/callback', to: 'callbacks#index'
   end
 end
