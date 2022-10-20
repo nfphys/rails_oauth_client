@@ -21,7 +21,7 @@ class Oauth::CallbacksController < ApplicationController
 
       req = Net::HTTP::Post.new(uri.path)
       req['Content-Type'] = 'application/x-www-form-urlencoded'
-      req['Authorization'] = "Basic oauth-client:secret"
+      req.basic_auth 'oauth-client', 'secret'
       req.set_form_data({
         'grant_type' => 'authorization_code',
         'code' => params[:code],
