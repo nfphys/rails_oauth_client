@@ -5,5 +5,7 @@ class Oauth::CallbacksController < ApplicationController
       render 'oauth/callbacks/error'
       return
     end
+
+    redirect_to root_path
   end
 end
